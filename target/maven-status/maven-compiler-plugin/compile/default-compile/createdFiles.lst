@@ -1,0 +1,5 @@
+com\example\model\Movie.class
+com\example\model\MovieTicket.class
+com\example\Main.class
+com\example\service\Order.class
+com\example\model\Screening.class
