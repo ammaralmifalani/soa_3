@@ -16,4 +16,8 @@ public class Movie {
     public double getStandardPrice() {
         return standardPrice;
     }
+    @Override
+    public String toString() {
+        return "Movie: " + title + ", Standard Price: " + standardPrice;
+    }
 }

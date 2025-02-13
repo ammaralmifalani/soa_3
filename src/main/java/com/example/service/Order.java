@@ -22,5 +22,12 @@ public class Order {
     public double calculatePrice() {
         return pricingStrategy.calculatePrice(tickets, isStudentOrder);
     }
+    public List<MovieTicket> getTickets() {
+        return tickets;
+    }
+    
+    public boolean isStudentOrder() {
+        return isStudentOrder;
+    }
 }
 

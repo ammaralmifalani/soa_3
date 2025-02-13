@@ -13,7 +13,7 @@ public class StudentWeekdayPricingStrategy implements PricingStrategy {
         if (tickets.isEmpty()) return 0.0;
         
         double total = 0.0;
-        boolean isWeekend = !isWeekday(tickets.get(0).getScreening().getDate());
+        boolean isWeekend = isWeekday(tickets.get(0).getScreening().getDate());
       
         
         for (int i = 0; i < tickets.size(); i++) {

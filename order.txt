@@ -1,0 +1,6 @@
+Order Details:
+MovieTicket: Inception, Date: 2025-03-15T20:00, Premium: false
+MovieTicket: Inception, Date: 2025-03-15T20:00, Premium: true
+MovieTicket: Inception, Date: 2025-03-15T20:00, Premium: false
+MovieTicket: Inception, Date: 2025-03-15T20:00, Premium: true
+Total Price: 24.0

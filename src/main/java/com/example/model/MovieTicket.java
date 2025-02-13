@@ -16,4 +16,8 @@ public class MovieTicket {
     public boolean isPremium() {
         return isPremium;
     }
+     @Override
+    public String toString() {
+        return "MovieTicket: " + screening.getMovie().getTitle() + ", Date: " + screening.getDate() + ", Premium: " + isPremium;
+    }
 }

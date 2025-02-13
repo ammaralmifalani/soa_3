@@ -18,4 +18,9 @@ public class Screening {
     public LocalDateTime getDate() {
         return date;
     }
+    
+    @Override
+    public String toString() {
+        return "Screening: " + movie.getTitle() + " on " + date;
+    }
 }

@@ -1,5 +1,0 @@
-# Created at 2025-02-13T11:26:16.758
-Boot Manifest-JAR contains absolute paths in classpath 'D:\J3-P3\soa-3\java\bioscoopapp\target\test-classes'
-Hint: <argLine>-Djdk.net.URLClassPath.disableClassPathURLCheck=true</argLine>
-'other' has different root
-
