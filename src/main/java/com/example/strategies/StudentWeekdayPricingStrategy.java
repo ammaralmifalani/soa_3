@@ -14,25 +14,30 @@ public class StudentWeekdayPricingStrategy implements PricingStrategy {
         
         double total = 0.0;
         boolean isWeekend = !isWeekday(tickets.get(0).getScreening().getDate());
-        System.out.println("Weekend? " + isWeekend);
-        System.out.println("Student order? " + isStudentOrder);
+        // System.out.println("Weekend? " + isWeekend);
+        // System.out.println("Student order? " + isStudentOrder);
         
         for (int i = 0; i < tickets.size(); i++) {
             MovieTicket ticket = tickets.get(i);
             double basePrice = ticket.getScreening().getMovie().getStandardPrice();
             boolean isPremium = ticket.isPremium();
             
-            double premiumSurcharge = isPremium ? (isStudentOrder ? 2.0 : 3.0) : 0.0;
-            double ticketPrice = basePrice + premiumSurcharge;
-
-            // Regel 1: Elk 2e ticket is gratis voor studenten (altijd) of op doordeweekse dagen voor iedereen
-            if ((isStudentOrder || !isWeekend) && i % 2 == 1) {
-                System.out.println("Gratis ticket toegepast: " + (basePrice + premiumSurcharge));
-                continue; 
+            double premiumSurcharge = 0.0;
+            if (isPremium) {
+                premiumSurcharge = isStudentOrder ? 2.0 : 3.0;
             }
 
+            double ticketPrice = basePrice + premiumSurcharge;
+
+            boolean isEligibleForFreeTicket = isStudentOrder || !isWeekend;
+            boolean isEverySecondTicket = (i % 2 == 1);
+            
+            if (isEligibleForFreeTicket && isEverySecondTicket) {
+                continue; // Dit ticket is gratis
+            }
+            
             total += ticketPrice;
-            System.out.println("Ticket prijs: " + ticketPrice);
+            // System.out.println("Ticket prijs: " + ticketPrice);
         }
 
         return total;

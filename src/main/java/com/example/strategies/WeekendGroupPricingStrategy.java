@@ -16,23 +16,28 @@ public class WeekendGroupPricingStrategy implements PricingStrategy {
         double total = 0.0;
         boolean isWeekend = !isWeekday(tickets.get(0).getScreening().getDate());
         int ticketCount = tickets.size();
-        System.out.println("Weekend? " + isWeekend);
-        System.out.println("Student order? " + isStudentOrder);
+        // System.out.println("Weekend? " + isWeekend);
+        // System.out.println("Student order? " + isStudentOrder);
         for (MovieTicket ticket : tickets) {
             double basePrice = ticket.getScreening().getMovie().getStandardPrice();
-            System.out.println("Ticket prijs: " + basePrice);
-            System.out.println("Is premium: " + ticket.isPremium());
+            // System.out.println("Ticket prijs: " + basePrice);
+            // System.out.println("Is premium: " + ticket.isPremium());
 
-            double premiumSurcharge = ticket.isPremium() ? (isStudentOrder ? 2.0 : 3.0) : 0.0;
+            double premiumSurcharge = 0.0;
+            boolean isPremium = ticket.isPremium();
+            if (isPremium) {
+                premiumSurcharge = isStudentOrder ? 2.0 : 3.0;
+            }
             double ticketPrice = basePrice + premiumSurcharge;
 
-            System.out.println("Oorspronkelijke ticketprijs: " + ticketPrice);
+            // System.out.println("Oorspronkelijke ticketprijs: " + ticketPrice);
 
-            if (isWeekend && !isStudentOrder && ticketCount >= 6) {
-                ticketPrice *= 0.9; // 10% korting
-                System.out.println("Groepskorting toegepast: " + ticketPrice);
+            boolean isEligibleForGroupDiscount = isWeekend && !isStudentOrder && ticketCount >= 6;
+
+            if (isEligibleForGroupDiscount) {
+                ticketPrice *= 0.9; 
+                // System.out.println("Groepskorting toegepast: " + ticketPrice);
             }
-            
 
             total += ticketPrice;
         }
