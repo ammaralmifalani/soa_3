@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="OrderTest" time="0.047" tests="6" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="OrderTest" time="0.048" tests="6" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="21"/>
     <property name="sun.cpu.isalist" value="amd64"/>
@@ -15,7 +15,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="NL"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Eclipse Adoptium\jdk-21.0.2.13-hotspot\bin"/>
-    <property name="sun.java.command" value="C:\Users\ammar\AppData\Local\Temp\surefire11672456940293869815\surefirebooter-20250213110948060_3.jar C:\Users\ammar\AppData\Local\Temp\surefire11672456940293869815 2025-02-13T11-09-47_982-jvmRun1 surefire-20250213110948060_1tmp surefire_0-20250213110948060_2tmp"/>
+    <property name="sun.java.command" value="C:\Users\ammar\AppData\Local\Temp\surefire6087972465876935518\surefirebooter-20250213112616713_3.jar C:\Users\ammar\AppData\Local\Temp\surefire6087972465876935518 2025-02-13T11-26-16_603-jvmRun1 surefire-20250213112616713_1tmp surefire_0-20250213112616713_2tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="D:\J3-P3\soa-3\java\bioscoopapp\target\test-classes;D:\J3-P3\soa-3\java\bioscoopapp\target\classes;C:\Users\ammar\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.9.2\junit-jupiter-api-5.9.2.jar;C:\Users\ammar\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\ammar\.m2\repository\org\junit\platform\junit-platform-commons\1.9.2\junit-platform-commons-1.9.2.jar;C:\Users\ammar\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\ammar\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.9.2\junit-jupiter-engine-5.9.2.jar;C:\Users\ammar\.m2\repository\org\junit\platform\junit-platform-engine\1.9.2\junit-platform-engine-1.9.2.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -30,7 +30,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="C:\Users\ammar\AppData\Local\Temp\surefire11672456940293869815\surefirebooter-20250213110948060_3.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\ammar\AppData\Local\Temp\surefire6087972465876935518\surefirebooter-20250213112616713_3.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="21.0.2+13-LTS"/>
@@ -59,84 +59,10 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="65.0"/>
   </properties>
-  <testcase name="testCalculatePrice_NonStudentWeekday" classname="OrderTest" time="0.031">
-    <system-out><![CDATA[Weekend? false
-Student order? true
-Ticket prijs: 15.0
-Gratis ticket toegepast: 15.0
-Ticket prijs: 17.0
-Gratis ticket toegepast: 17.0
-]]></system-out>
-  </testcase>
-  <testcase name="testCalculatePrice_NonStudentWeekendWithGroupDiscount" classname="OrderTest" time="0.0">
-    <system-out><![CDATA[Weekend? true
-Student order? false
-Ticket prijs: 10.0
-Is premium: true
-Oorspronkelijke ticketprijs: 13.0
-Groepskorting toegepast: 11.700000000000001
-Ticket prijs: 10.0
-Is premium: true
-Oorspronkelijke ticketprijs: 13.0
-Groepskorting toegepast: 11.700000000000001
-Ticket prijs: 10.0
-Is premium: true
-Oorspronkelijke ticketprijs: 13.0
-Groepskorting toegepast: 11.700000000000001
-Ticket prijs: 10.0
-Is premium: true
-Oorspronkelijke ticketprijs: 13.0
-Groepskorting toegepast: 11.700000000000001
-Ticket prijs: 10.0
-Is premium: true
-Oorspronkelijke ticketprijs: 13.0
-Groepskorting toegepast: 11.700000000000001
-Ticket prijs: 10.0
-Is premium: true
-Oorspronkelijke ticketprijs: 13.0
-Groepskorting toegepast: 11.700000000000001
-]]></system-out>
-  </testcase>
+  <testcase name="testCalculatePrice_NonStudentWeekday" classname="OrderTest" time="0.016"/>
+  <testcase name="testCalculatePrice_NonStudentWeekendWithGroupDiscount" classname="OrderTest" time="0.0"/>
   <testcase name="testCalculatePrice_EmptyOrder" classname="OrderTest" time="0.0"/>
-  <testcase name="testCalculatePrice_StudentWeekendWithGroupDiscount" classname="OrderTest" time="0.0">
-    <system-out><![CDATA[Weekend? true
-Student order? true
-Ticket prijs: 11.0
-Is premium: true
-Oorspronkelijke ticketprijs: 13.0
-Ticket prijs: 11.0
-Is premium: true
-Oorspronkelijke ticketprijs: 13.0
-Ticket prijs: 11.0
-Is premium: true
-Oorspronkelijke ticketprijs: 13.0
-Ticket prijs: 11.0
-Is premium: true
-Oorspronkelijke ticketprijs: 13.0
-Ticket prijs: 11.0
-Is premium: true
-Oorspronkelijke ticketprijs: 13.0
-Ticket prijs: 11.0
-Is premium: true
-Oorspronkelijke ticketprijs: 13.0
-]]></system-out>
-  </testcase>
-  <testcase name="testCalculatePrice_StudentWeekend" classname="OrderTest" time="0.016">
-    <system-out><![CDATA[Weekend? true
-Student order? true
-Ticket prijs: 12.0
-Gratis ticket toegepast: 14.0
-Ticket prijs: 14.0
-Gratis ticket toegepast: 12.0
-]]></system-out>
-  </testcase>
-  <testcase name="testCalculatePrice_StudentOnWeekday" classname="OrderTest" time="0.0">
-    <system-out><![CDATA[Weekend? false
-Student order? true
-Ticket prijs: 10.0
-Gratis ticket toegepast: 10.0
-Ticket prijs: 12.0
-Gratis ticket toegepast: 12.0
-]]></system-out>
-  </testcase>
+  <testcase name="testCalculatePrice_StudentWeekendWithGroupDiscount" classname="OrderTest" time="0.0"/>
+  <testcase name="testCalculatePrice_StudentWeekend" classname="OrderTest" time="0.0"/>
+  <testcase name="testCalculatePrice_StudentOnWeekday" classname="OrderTest" time="0.001"/>
 </testsuite>

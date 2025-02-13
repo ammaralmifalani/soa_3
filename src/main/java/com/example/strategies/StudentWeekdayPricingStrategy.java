@@ -9,13 +9,12 @@ import com.example.model.MovieTicket;
 public class StudentWeekdayPricingStrategy implements PricingStrategy {
 
     @Override
-    public double calculatePrice(List<MovieTicket> tickets, Boolean isStudentOrder) {
+    public double calculatePrice(List<MovieTicket> tickets, boolean isStudentOrder) {
         if (tickets.isEmpty()) return 0.0;
         
         double total = 0.0;
         boolean isWeekend = !isWeekday(tickets.get(0).getScreening().getDate());
-        // System.out.println("Weekend? " + isWeekend);
-        // System.out.println("Student order? " + isStudentOrder);
+      
         
         for (int i = 0; i < tickets.size(); i++) {
             MovieTicket ticket = tickets.get(i);
@@ -33,11 +32,10 @@ public class StudentWeekdayPricingStrategy implements PricingStrategy {
             boolean isEverySecondTicket = (i % 2 == 1);
             
             if (isEligibleForFreeTicket && isEverySecondTicket) {
-                continue; // Dit ticket is gratis
+                continue; 
             }
             
             total += ticketPrice;
-            // System.out.println("Ticket prijs: " + ticketPrice);
         }
 
         return total;
