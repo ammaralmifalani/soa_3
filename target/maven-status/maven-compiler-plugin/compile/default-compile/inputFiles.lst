@@ -1,5 +1,8 @@
+D:\J3-P3\soa-3\java\bioscoopapp\src\main\java\com\example\interfaces\PricingStrategy.java
 D:\J3-P3\soa-3\java\bioscoopapp\src\main\java\com\example\Main.java
 D:\J3-P3\soa-3\java\bioscoopapp\src\main\java\com\example\model\Movie.java
 D:\J3-P3\soa-3\java\bioscoopapp\src\main\java\com\example\model\MovieTicket.java
 D:\J3-P3\soa-3\java\bioscoopapp\src\main\java\com\example\model\Screening.java
 D:\J3-P3\soa-3\java\bioscoopapp\src\main\java\com\example\service\Order.java
+D:\J3-P3\soa-3\java\bioscoopapp\src\main\java\com\example\strategies\StudentWeekdayPricingStrategy.java
+D:\J3-P3\soa-3\java\bioscoopapp\src\main\java\com\example\strategies\WeekendGroupPricingStrategy.java

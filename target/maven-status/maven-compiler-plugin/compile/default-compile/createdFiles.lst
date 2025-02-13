@@ -1,5 +1,8 @@
+com\example\interfaces\PricingStrategy.class
 com\example\model\Movie.class
 com\example\model\MovieTicket.class
 com\example\Main.class
 com\example\service\Order.class
+com\example\strategies\StudentWeekdayPricingStrategy.class
 com\example\model\Screening.class
+com\example\strategies\WeekendGroupPricingStrategy.class
